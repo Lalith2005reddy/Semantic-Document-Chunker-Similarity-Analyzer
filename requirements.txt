@@ -1,0 +1,7 @@
+langchain
+langchain-experimental
+langchain-huggingface
+sentence-transformers
+scikit-learn
+streamlit
+python-dotenv
