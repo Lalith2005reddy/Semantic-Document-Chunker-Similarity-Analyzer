@@ -1,11 +1,12 @@
-from langchain_huggingface import HuggingFaceEndpointEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from dotenv import load_dotenv
 
 load_dotenv()
 
 
 def load_embeddings():
-    embeddings = HuggingFaceEndpointEmbeddings(
-        model="sentence-transformers/all-MiniLM-L6-v2"
+    embeddings = HuggingFaceEmbeddings(
+        model_name="BAAI/bge-small-en",
+        model_kwargs={"device": "cuda"}  # GPU
     )
     return embeddings

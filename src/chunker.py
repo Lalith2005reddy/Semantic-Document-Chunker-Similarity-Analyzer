@@ -7,9 +7,8 @@ def semantic_chunk(text,embeddings):
     
     text_splitter = SemanticChunker(
         embeddings,
-        breakpoint_threshold_type="percentile",
-        breakpoint_threshold_amount=85,
-        min_chunk_size=100
+        breakpoint_threshold_type="standard_deviation",
+        breakpoint_threshold_amount=0.5,
     )
 
     docs = text_splitter.create_documents([text])
