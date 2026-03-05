@@ -7,6 +7,6 @@ load_dotenv()
 def load_embeddings():
     embeddings = HuggingFaceEmbeddings(
         model_name="BAAI/bge-small-en",
-        model_kwargs={"device": "cuda"}  # GPU
+        model_kwargs={"device": "cpu"}  # GPU
     )
     return embeddings

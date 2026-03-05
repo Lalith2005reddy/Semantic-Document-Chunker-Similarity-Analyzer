@@ -16,7 +16,7 @@ option = st.sidebar.selectbox(
 
 if option == "Semantic Chunking":
 
-    text = st.text_area("Enter Document")
+    text = st.text_area("Enter Document", height=300)
 
     if st.button("Split Document"):
         chunks = semantic_chunk(text, embeddings)
